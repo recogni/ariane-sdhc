@@ -1,4 +1,4 @@
-sd-eMMC_controller:
+ariane-sdhc:
     incdirs: [
         include,
     ]
