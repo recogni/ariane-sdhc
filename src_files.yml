@@ -1,0 +1,19 @@
+shdci:
+    files:
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_ODDR.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_bistable_domain_cross.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_clock_divider.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_cmd_master.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_cmd_serial_host.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_controller.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_controller_S00_AXI.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_controller_dma.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_crc_16.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_crc_7.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_data_master.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_data_serial_host.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_data_xfer_trig.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_edge_detect.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_fifo18kb.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_iddr.v
+        - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_monostable_domain_cross.v
