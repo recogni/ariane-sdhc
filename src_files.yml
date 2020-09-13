@@ -1,4 +1,6 @@
 shdci:
+    incdirs:
+        - eMMC_HC_v3.0/sd-eMMC_controller/src
     files:
         - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_ODDR.v
         - eMMC_HC_v3.0/sd-eMMC_controller/src/sd_emmc_bistable_domain_cross.v
