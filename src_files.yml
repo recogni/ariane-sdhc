@@ -2,25 +2,25 @@ ariane-sdhc:
     incdirs: [
         include,
     ]
-    files: [
-        rtl/IDDR.sv
-        rtl/ODDR.sv
-        rtl/sd_emmc_bistable_domain_cross.v
-        rtl/sd_emmc_clock_divider.v
-        rtl/sd_emmc_cmd_master.v
-        rtl/sd_emmc_cmd_serial_host.v
-        rtl/sd_emmc_controller_dma.v
-        rtl/sd_emmc_controller_S00_AXI.v
-        rtl/sd_emmc_controller.v
-        rtl/sd_emmc_crc_16.v
-        rtl/sd_emmc_crc_7.v
-        rtl/sd_emmc_data_master.v
-        rtl/sd_emmc_data_serial_host.v
-        rtl/sd_emmc_data_xfer_trig.v
-        rtl/sd_emmc_edge_detect.v
-        rtl/sd_emmc_fifo18kb.v
-        rtl/sd_emmc_iddr.v
-        rtl/sd_emmc_monostable_domain_cross.v
-        rtl/sd_emmc_ODDR.v
-    ]
+    files: 
+        - rtl/IDDR.sv
+        - rtl/ODDR.sv
+        - rtl/sd_emmc_bistable_domain_cross.v
+        - rtl/sd_emmc_clock_divider.v
+        - rtl/sd_emmc_cmd_master.v
+        - rtl/sd_emmc_cmd_serial_host.v
+        - rtl/sd_emmc_controller_dma.v
+        - rtl/sd_emmc_controller_S00_AXI.v
+        - rtl/sd_emmc_crc_16.v
+        - rtl/sd_emmc_crc_7.v
+        - rtl/sd_emmc_data_master.v
+        - rtl/sd_emmc_data_serial_host.v
+        - rtl/sd_emmc_data_xfer_trig.v
+        - rtl/sd_emmc_edge_detect.v
+        - rtl/sd_emmc_fifo16kb.v
+        - rtl/sd_emmc_iddr.v
+        - rtl/sd_emmc_monostable_domain_cross.v
+        - rtl/sd_emmc_ODDR.v
+        - rtl/sd_emmc_controller.v
+    
 

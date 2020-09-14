@@ -429,7 +429,7 @@
         .start_rx_o            (data_start_rx)
         );
         
-    fifo18Kb fifo18Kb_inst(
+    fifo16Kb fifo16Kb_inst(
         .aclk           (s00_axi_aclk),
         .sd_clk         (SD_CLK),
         .rst            (!s00_axi_aresetn | soft_rst_dat_sd_clk | fifo_reset),
