@@ -15,7 +15,7 @@ module fifo16Kb(
     output sd_full_o
     );
 
-  CW_fifoctl_s2_sf #(
+  CW_fifo_s2_sf #(
     .width ( 32  ),
     .depth ( 128 ),
     .rst_mode ( 3 ) // Synchronous reset for control only
@@ -31,7 +31,7 @@ module fifo16Kb(
     .pop_empty ( )
   );
 
-  CW_fifoctl_s2_sf #(
+  CW_fifo_s2_sf #(
     .width ( 32  ),
     .depth ( 128 )   
   ) i_sd_fifo (
