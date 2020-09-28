@@ -25,7 +25,7 @@ module IDDR #(
         end
     end
 
-    if (DDR_CLK_EDGE == "SAME_EDGE") begin 
+    if (DDR_CLK_EDGE == "OPPOSITE_EDGE") begin 
         always_ff @(negedge C) begin
             if (CE == 1'b1) begin
                 if (R == 1'b1) begin
