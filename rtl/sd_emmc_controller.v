@@ -7,6 +7,13 @@
                 parameter integer C_S00_AXI_ADDR_WIDTH    = 32
         )
         (
+        // Recogni ports to replace clock_divider
+        input wire SD_CLK,
+        input wire int_clk_stbl,
+        input wire sd_clk90,
+        output wire [7:0]  divisor,
+        // Recogni ports to replace clock_divider
+
         //SD interface
         output wire SD_CLK,
         output wire sd_cmd_o,
@@ -83,10 +90,6 @@
         input wire  M_AXI_RVALID,
         output wire  M_AXI_RREADY
         );
-
-    //SD clock
-    wire [7:0]  divisor;
-    wire int_clk_stbl;
 
     wire go_idle;
     wire cmd_start_axi_clk;
@@ -320,16 +323,6 @@
             .blk_gap_req(stop_blk_gap_req),
             .cc_int_puls(cmd_cmplt_axi_puls),
             .UHSModSel(UHSModSel_axi_clk)
-        );
-
-    // Clock divider
-        sd_clock_divider sd_clock_divider_i (
-            .AXI_CLOCK(s00_axi_aclk),
-            .sd_clk(SD_CLK),
-            .DIVISOR(divisor),
-            .AXI_RST(s00_axi_aresetn/* & int_clk_en*/),
-            .Internal_clk_stable(int_clk_stbl),
-            .sd_clk90(sd_clk90)
         );
 
     sd_cmd_master sd_cmd_master0(
