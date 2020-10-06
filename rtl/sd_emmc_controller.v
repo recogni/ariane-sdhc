@@ -15,7 +15,6 @@
         // Recogni ports to replace clock_divider
 
         //SD interface
-        output wire SD_CLK,
         output wire sd_cmd_o,
         input wire sd_cmd_i,
         output wire sd_cmd_t,
@@ -202,7 +201,6 @@
     // UHS mode
     wire [2:0] UHSModSel_axi_clk;
     wire [2:0] UHSModSel_sd_clk;
-    wire sd_clk90;
     
         sd_emmc_controller_dma sd_emmc_controller_dma_inst(
             .clock(M_AXI_ACLK),
