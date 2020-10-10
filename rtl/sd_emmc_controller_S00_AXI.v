@@ -648,7 +648,7 @@
 	        5'h12   : reg_data_out <= 0;               //slv_reg18;
 	        5'h13   : reg_data_out <= 0;               //slv_reg19;
 	        5'h16   : reg_data_out <= slv_reg22;
-	        5'h3F   : reg_data_out <= 32'h00020000;    //Host Controller Version
+	        5'h1F   : reg_data_out <= 32'h00020000;    //Host Controller Version
 
 	        
 	        default : reg_data_out <= 0;
