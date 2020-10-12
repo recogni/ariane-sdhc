@@ -151,8 +151,16 @@ always @(posedge sd_clk)
     DAT_dat_reg <= iddrQ1;
 
 //sd data input pad register
-always @(negedge sd_clk)
+reg sd_clk_inv;
+pd_ckinv
+ clk_inv
+ (
+.clk_in            (sd_clk),
+.clk_inv_out       (sd_clk_inv));
+
+always @(posedge sd_clk_inv)
     DAT_dat_regn <= iddrQ2;
+
 genvar i;
 generate
     for(i=0; i<16; i=i+1) begin: CRC_16_gen
