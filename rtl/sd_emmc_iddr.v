@@ -36,7 +36,14 @@ module IDDR_p(
     end
   end
 
-  always @(negedge clock or posedge reset) begin
+  reg clk_inv;
+  pd_ckinv
+   ddr_clk_inv
+   (
+  .clk_in            (clock),
+  .clk_inv_out       (clk_inv));
+
+  always @(posedge clk_inv or posedge reset) begin
     if (reset) begin
       iddr_Q2 <= '0;
     end else begin
