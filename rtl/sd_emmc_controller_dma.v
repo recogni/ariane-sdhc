@@ -429,6 +429,7 @@ localparam [2:0] ST_STOP = 3'b000, //State Stop DMA. ADMA2 stays in this state i
     always @ (posedge clock)
       begin: adma
         if(reset == 1'b0) begin
+          next_state <= ST_STOP;
           start_dat_trans <= 0;
           sys_addr_sel <= 0;
           descriptor_pointer_reg <= 0;
