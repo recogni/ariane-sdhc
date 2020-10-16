@@ -18,13 +18,13 @@ module fifo16Kb(
   CW_fifo_s2_sf #(
     .width ( 32  ),
     .depth ( 128 ),
-    .rst_mode ( 3 ) // Synchronous reset for control only
+    .rst_mode ( 2 ) // Asynchronous reset for control only
   ) i_axi_fifo (
     .rst_n     ( ~rst        ),
     .clk_push  ( aclk        ),
     .clk_pop   ( sd_clk      ),
-    .push_req_n( axi_wr_en   ),
-    .pop_req_n ( sd_rd_en    ),
+    .push_req_n( ~axi_wr_en  ),
+    .pop_req_n ( ~sd_rd_en   ),
     .data_in   ( axi_data_in ),
     .data_out  ( sd_data_out ),
     .push_full ( ),
@@ -33,13 +33,14 @@ module fifo16Kb(
 
   CW_fifo_s2_sf #(
     .width ( 32  ),
-    .depth ( 128 )   
+    .depth ( 128 ),
+    .rst_mode ( 2 ) // Asynchronous reset for control only
   ) i_sd_fifo (
     .rst_n     ( ~rst         ),
     .clk_push  ( sd_clk       ),
     .clk_pop   ( aclk         ),
-    .push_req_n( sd_wr_en     ),
-    .pop_req_n ( axi_rd_en    ),
+    .push_req_n( ~sd_wr_en    ),
+    .pop_req_n ( ~axi_rd_en   ),
     .data_in   ( sd_data_in   ),
     .data_out  ( axi_data_out ),
     .push_full ( sd_full_o    ),
