@@ -443,7 +443,7 @@ localparam [2:0] ST_STOP = 3'b000, //State Stop DMA. ADMA2 stays in this state i
         else begin
           case (adma_state)
             ST_STOP: begin
-                       if (dma_ena_trans_mode & cmd_start_puls & data_present /*& dat_int_rst*/) begin
+                       if (dma_ena_trans_mode & (dir_dat_trans_mode ? cmd_start_puls : cmd_compl_puls) & data_present /*& dat_int_rst*/) begin
                          next_state <= ST_FDS;
                          sdma_contr_reg <= 12'h01E; //Read from SysRam, read to descriptor line, read from adma_descriptor_pointer addres, read two beats in burst, start read. 
                          rd_dat_words <= 17'h00008;
