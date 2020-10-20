@@ -257,6 +257,7 @@
             .write_timeout({d_read, d_write}),
             .descriptor_pointer_i(system_addr),
             .data_present(command_axi_clk[5]),
+            .cmd_start_puls(cmd_start_axi_clk),
             .cmd_compl_puls(cmd_cmplt_axi_puls),
             .blk_gap_req(stop_blk_gap_req)
         );
