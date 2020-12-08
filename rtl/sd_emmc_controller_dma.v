@@ -256,6 +256,7 @@ localparam [2:0] ST_STOP = 3'b000, //State Stop DMA. ADMA2 stays in this state i
         fifo_rst <= 0;
         descriptor_line <= 0;
         start_write <= 0;
+        we_counter_reset <= 0;
       end
       else begin
         case (state)
