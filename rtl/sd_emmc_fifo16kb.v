@@ -18,6 +18,7 @@ module fifo16Kb(
   CW_fifo_s2_sf #(
     .width ( 32  ),
     .depth ( 128 ),
+    .pop_sync ( 2 ),
     .rst_mode ( 2 ) // Asynchronous reset for control only
   ) i_axi_fifo (
     .rst_n     ( ~rst        ),
@@ -34,6 +35,7 @@ module fifo16Kb(
   CW_fifo_s2_sf #(
     .width ( 32  ),
     .depth ( 128 ),
+    .pop_sync ( 2 ),
     .rst_mode ( 2 ) // Asynchronous reset for control only
   ) i_sd_fifo (
     .rst_n     ( ~rst         ),
