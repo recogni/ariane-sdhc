@@ -20,6 +20,11 @@
 
 `timescale 1ns / 1ps
 
+`define XILINX 1
+// xilinx translate_off
+`undef  XILINX
+// xilinx translate_on
+
 module ODDR_p(
   input reset,
   input clock,
@@ -28,11 +33,16 @@ module ODDR_p(
   output [7:0] oq
   );
 
- 
+`ifdef XILINX
+  parameter SR_TYPE = "ASYNC";
+`else
+  parameter SR_TYPE = "SYNC";
+`endif
+
   ODDR  #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
-  .SRTYPE       ( "SYNC" )                 // Set/Reset type: "SYNC" or "ASYNC"
+  .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"
   ) ODDR_inst0 (
   .Q(oq[0]),                               // 1-bit DDR output
   .C(clock),                               // 1-bit clock input
@@ -46,7 +56,7 @@ module ODDR_p(
   ODDR  #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
-  .SRTYPE       ( "SYNC" )                 // Set/Reset type: "SYNC" or "ASYNC"
+  .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"
   ) ODDR_inst1 (
   .Q(oq[1]),                               // 1-bit DDR output
   .C(clock),                               // 1-bit clock input
@@ -60,7 +70,7 @@ module ODDR_p(
   ODDR  #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
-  .SRTYPE       ( "SYNC" )                 // Set/Reset type: "SYNC" or "ASYNC"
+  .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"
   ) ODDR_inst2 (
   .Q(oq[2]),                               // 1-bit DDR output
   .C(clock),                               // 1-bit clock input
@@ -74,7 +84,7 @@ module ODDR_p(
   ODDR  #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
-  .SRTYPE       ( "SYNC" )                 // Set/Reset type: "SYNC" or "ASYNC"
+  .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"
   ) ODDR_inst3 (
   .Q(oq[3]),                               // 1-bit DDR output
   .C(clock),                               // 1-bit clock input
@@ -88,7 +98,7 @@ module ODDR_p(
   ODDR  #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
-  .SRTYPE       ( "SYNC" )                 // Set/Reset type: "SYNC" or "ASYNC"
+  .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"
   ) ODDR_inst4 (
   .Q(oq[4]),                               // 1-bit DDR output
   .C(clock),                               // 1-bit clock input
@@ -102,7 +112,7 @@ module ODDR_p(
   ODDR  #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
-  .SRTYPE       ( "SYNC" )                 // Set/Reset type: "SYNC" or "ASYNC"
+  .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"
   ) ODDR_inst5 (
   .Q(oq[5]),                               // 1-bit DDR output
   .C(clock),                               // 1-bit clock input
@@ -116,7 +126,7 @@ module ODDR_p(
   ODDR  #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
-  .SRTYPE       ( "SYNC" )                 // Set/Reset type: "SYNC" or "ASYNC"
+  .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"
   ) ODDR_inst6 (
   .Q(oq[6]),                               // 1-bit DDR output
   .C(clock),                               // 1-bit clock input
@@ -130,7 +140,7 @@ module ODDR_p(
   ODDR  #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
-  .SRTYPE       ( "SYNC" )                 // Set/Reset type: "SYNC" or "ASYNC"
+  .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"
   ) ODDR_inst7 (
   .Q(oq[7]),                               // 1-bit DDR output
   .C(clock),                               // 1-bit clock input
