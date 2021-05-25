@@ -39,7 +39,7 @@ module ODDR_p(
   parameter SR_TYPE = "SYNC";
 `endif
 
-  ODDR  #(
+  ODDR_sdhc #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
   .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"
@@ -53,7 +53,7 @@ module ODDR_p(
   .S(1'b0)                                 // 1-bit set
   );
   
-  ODDR  #(
+  ODDR_sdhc #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
   .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"
@@ -67,7 +67,7 @@ module ODDR_p(
   .S(1'b0)                                 // 1-bit set
   );
 
-  ODDR  #(
+  ODDR_sdhc #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
   .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"
@@ -81,7 +81,7 @@ module ODDR_p(
   .S(1'b0)                                 // 1-bit set
   );
 
-  ODDR  #(
+  ODDR_sdhc #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
   .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"
@@ -95,7 +95,7 @@ module ODDR_p(
   .S(1'b0)                                 // 1-bit set
   );
 
-  ODDR  #(
+  ODDR_sdhc #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
   .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"
@@ -109,7 +109,7 @@ module ODDR_p(
   .S(1'b0)                                 // 1-bit set
   );
 
-  ODDR  #(
+  ODDR_sdhc #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
   .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"
@@ -123,7 +123,7 @@ module ODDR_p(
   .S(1'b0)                                 // 1-bit set
   );
 
-  ODDR  #(
+  ODDR_sdhc #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
   .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"
@@ -137,7 +137,7 @@ module ODDR_p(
   .S(1'b0)                                 // 1-bit set
   );
 
-  ODDR  #(
+  ODDR_sdhc #(
   .DDR_CLK_EDGE ( "SAME_EDGE" ),           // "SAME_EDGE" or "OPPOSITE_EDGE"
   .INIT         ( 1'b0 ),                  // Initial value of    Q:1'b0 or 1'b1
   .SRTYPE       ( SR_TYPE )                 // Set/Reset type: "SYNC" or "ASYNC"

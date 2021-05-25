@@ -1,4 +1,4 @@
-module ODDR #(
+module ODDR_shdc #(
     parameter DDR_CLK_EDGE="SAME_EDGE",
     parameter INIT=1'b0,
     parameter SRTYPE="SYNC"
