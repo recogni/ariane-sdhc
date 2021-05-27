@@ -4,7 +4,7 @@ ariane-sdhc:
     ]
     files: 
         - rtl/IDDR.sv
-        - rtl/ODDR.sv
+        - rtl/ODDR_sdhc.sv
         - rtl/sd_emmc_bistable_domain_cross.v
         - rtl/sd_emmc_clock_divider.v
         - rtl/sd_emmc_cmd_master.v
